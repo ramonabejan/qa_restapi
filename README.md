@@ -1,2 +1,2 @@
 # qa_restapi
-Q&amp;A rest api application with Express  
+Q&A rest api with Express  

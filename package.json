@@ -1,0 +1,25 @@
+{
+  "name": "qa_restapi",
+  "version": "1.0.0",
+  "description": "Q&A rest api with Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramonabejan/qa_restapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramonabejan/qa_restapi/issues"
+  },
+  "homepage": "https://github.com/ramonabejan/qa_restapi#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
+  }
+}
