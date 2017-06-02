@@ -22,6 +22,22 @@ db.once("open",() => {
 	console.log("db connection successful");
 })
 
+//Setting-up the api to be used by a browser
+//mw for granting cors 
+app.use((req,res,next)=>{
+	//allow acces to the api from any domain
+	res.header("Acces-Control-Allow-Origin","*");
+	//which headers are permited in the requests
+	res.header("Acces-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+	//grant pe-flight request permission (preflight requests come with the method OPTIONS)
+	if(req.method === "OPTIONS") {
+		res.header("Acces-Control-Allow-Methods","PUT,POST,DELETE");
+		return res.status(200).json({});
+	}
+	next();
+})
+
+
 //Handle the routes
 app.use('/questions', routes);
 
